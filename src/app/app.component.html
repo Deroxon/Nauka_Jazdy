@@ -1,0 +1,38 @@
+<mat-grid-list cols="4" [rowHeight]="(width > 400 && width < 1000) ? '100px': (width > 1000) ? '90px': '110px' " class="main">
+
+    <button (click)="toggleMenu()" *ngIf="navigationMenu"  class="exitButton" >X</button>
+    <button (click)="toggleMenu()" *ngIf="!navigationMenu" class="dropdownButton" mat-fab color="primary"><mat-icon>density_medium</mat-icon></button>
+
+    <mat-grid-tile   class="navMenu navMenuAnimate" colspan="4" >
+      <app-header style="width:100%"></app-header>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+    class="logo" rowspan="4"  colspan="4" >
+    </mat-grid-tile>
+
+    <main>
+
+    <mat-grid-tile  class="reveal" rowspan="5"  colspan="4">
+      <app-about></app-about>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="reveal" style="backgroundColor: rgb(56, 93, 207); " rowspan="6"   colspan="4">
+      <app-offer style="width:100%"></app-offer>
+    </mat-grid-tile>
+
+    <mat-grid-tile  class="reveal" rowspan="7"  colspan="4">
+      <app-pricing></app-pricing>
+    </mat-grid-tile>
+
+    <mat-grid-tile  class="reveal" rowspan="5"  colspan="4">
+      <app-gmap></app-gmap>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="reveal" rowspan="5"  colspan="4">
+      <app-contact></app-contact>
+    </mat-grid-tile>
+
+  </main>
+
+</mat-grid-list>

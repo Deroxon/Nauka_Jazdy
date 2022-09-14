@@ -1,0 +1,23 @@
+<section class="offerSection">
+  <h1>Co oferujemy:</h1>
+
+
+
+  <mat-grid-list class="offerList" [cols]="breakpoint" [rowHeight]="rowHeight + 'px'" (window:resize)="checkSize($event)">
+
+    <mat-grid-tile
+    *ngFor="let offer of tableOffer"
+
+    >
+    <div class="offerItem">
+      <mat-icon class="offerIcon">{{offer.icon}} </mat-icon>
+      <span class="text">{{offer.text}}</span>
+    </div>
+
+
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+</section>

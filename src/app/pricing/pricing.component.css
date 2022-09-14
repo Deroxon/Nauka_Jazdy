@@ -1,0 +1,60 @@
+
+h1{
+  text-align: center;
+}
+.h1MainPrice {
+  font-weight: 700;
+  font-size:2.2em
+}
+.mainPrice{
+  border-style: ridge;
+  padding: 15px;
+}
+.containerPrice  {
+  padding: 30px;
+  margin-top:100px
+}
+h2 span {
+  font-size:1.3em;
+  margin-left:5px;
+}
+:host /deep/ .mat-list-item-content {
+  font-size: 1.4em;
+}
+.extraLessons {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top:20px;
+}
+
+
+h2 {text-align: center;}
+::ng-deep .mat-list .mat-list-item .mat-line{
+  word-wrap: break-word;
+ white-space: pre-wrap;
+
+}
+mat-list {
+  margin-top: 50px;
+}
+
+@media screen and (max-width:700px) {
+  :host /deep/ .mat-list-item-content {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+
+}
+@media screen and (max-width: 420px) {
+  :host /deep/ .mat-list-item-content {
+    font-size: 0.7em;
+
+  }
+  .extraLessons {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top:20px;
+  }
+
+}
+

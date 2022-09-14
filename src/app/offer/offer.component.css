@@ -1,0 +1,49 @@
+
+.offerSection h1 {
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 2em;
+  margin-top: -50px;
+}
+.offerSection {
+  width:100%;
+  font-size:18px;
+}
+.offerItem {
+  text-align: center;
+}
+.text {
+  display: block;
+  margin-top:40px;
+  color: #ffffff;
+}
+.offerIcon {
+  transform: scale(4);
+  color: #fcfcfc;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .offerSection h1 {
+    font-size: 1.2em;
+  }
+
+  .offerIcon {
+    transform: scale(3);
+  }
+  .text {
+    font-size:0.8em;
+    margin-top:20px;
+  }
+}
+/* Phones */
+@media screen and (max-width: 500px) {
+
+  .offerIcon {
+    transform: scale(2.5);
+  }
+  .text {
+    margin-top:10px;
+    font-size:0.7em
+  }
+}

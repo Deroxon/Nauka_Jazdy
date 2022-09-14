@@ -1,0 +1,73 @@
+<article>
+  <h1>Brakuje ci jakiś informacji? Skontaktuj się z nami!</h1>
+
+
+  <form action="https://formsubmit.co/f40431894da70ec8d7585e476ecf7006" method="POST" (submit)="sendEmail($event)">
+    <mat-form-field appearance="fill" >
+      <mat-label>Imię</mat-label>
+      <input
+        maxlength="30"
+        [(ngModel)]="name"
+        (keyup)="emitWords($event)"
+        type="text"
+        matInput
+        required
+        name="Imie" >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nazwisko</mat-label>
+      <input
+        maxlength="30"
+        type="text"
+        [(ngModel)]="surName"
+        (keyup)="emitWords($event)"
+        matInput
+        required
+        name="Nazwisko">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Adres email</mat-label>
+      <input
+        type="email"
+        [(ngModel)]="emailed"
+        matInput
+        required
+        name="Email"
+        [formControl]="email">
+      <mat-error *ngIf='email.invalid'>{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Numer telefonu</mat-label>
+      <input
+        [(ngModel)]="phone"
+        (keyup)="checkNumbers($event)"
+        type="string"
+        maxlength="9"
+        matInput
+        name="Telefon">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Tekst</mat-label>
+      <textarea
+      [(ngModel)]="textArea"
+      type="text"
+      class="textArea"
+      matInput
+      required
+      maxlength="255"
+      name="Text"></textarea>
+      <mat-hint align="start">Max 255 znaków</mat-hint>
+    </mat-form-field>
+
+
+    <button name="contact" type="submit" mat-flat-button color="primary">Wyślij!</button>
+
+  </form>
+
+
+
+</article>
