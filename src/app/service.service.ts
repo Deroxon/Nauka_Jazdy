@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { HostListener, Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({
@@ -11,6 +11,7 @@ export class ServiceService {
   rowHeight!:number;
   actualWidth!: number;
   formObject: object = {};
+  positionsNav: Array<any> = []
 
 
   breakpointOffer$ = new Subject()
@@ -41,6 +42,10 @@ export class ServiceService {
     this.rowHeight$.next(this.rowHeight)
     this.actualWidth$.next(this.actualWidth)
   }
+
+
+
+
 
   changeFormDetails(value:object) {
     this.formObject = value

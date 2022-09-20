@@ -13,21 +13,21 @@ export class OfferComponent  {
 
   tableOffer = [
    {
-    text:"Sprawną komunikację z nami!",
+    text:"Sprawną komunikację z nami - odpowiemy na wszystkie Wasze pytania",
     icon: "settings_phone"
-   },
-   {
-    text:"Dodatkowe Jazdy bez konieczności wykupienia całego kursu!",
-    icon: "call_split"
    },
    {
     text:"Elastyczność, dzięki której dostosujemy się do twoich potrzeb!",
     icon: "calendar_month"
    },
    {
-    text:"Niskie koszta Kursów",
+    text:"Promocyjne ceny kursu oraz jazd dodatkowych (tak bym zmieniła)",
     icon: "attach_money"
    },
+   {
+    text: 'W obrębie miasta dojazd do kursanta na zajęcia praktyczne',
+    icon: 'directions_car'
+   }
   ]
 
 

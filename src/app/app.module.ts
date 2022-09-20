@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import  {MatInputModule } from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { OfferComponent } from './offer/offer.component';
 import { PricingComponent } from './pricing/pricing.component';
@@ -42,6 +43,7 @@ import { GmapComponent } from './gmap/gmap.component';
   ReactiveFormsModule,
   MatInputModule,
   HttpClientModule,
+  MatSnackBarModule,
 
 
   //Angular Material
@@ -51,6 +53,7 @@ import { GmapComponent } from './gmap/gmap.component';
   MatIconModule,
   MatFormFieldModule,
   MatListModule,
+
 
   ],
   providers: [],

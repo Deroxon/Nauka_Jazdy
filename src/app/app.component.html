@@ -1,4 +1,5 @@
-<mat-grid-list cols="4" [rowHeight]="(width > 400 && width < 1000) ? '100px': (width > 1000) ? '90px': '110px' " class="main">
+<mat-grid-list cols="4"
+[rowHeight]="(width > 400 && width < 1000) ? '100px': (width > 1000) ? '90px': '110px' " class="main">
 
     <button (click)="toggleMenu()" *ngIf="navigationMenu"  class="exitButton" >X</button>
     <button (click)="toggleMenu()" *ngIf="!navigationMenu" class="dropdownButton" mat-fab color="primary"><mat-icon>density_medium</mat-icon></button>
@@ -21,7 +22,7 @@
       <app-offer style="width:100%"></app-offer>
     </mat-grid-tile>
 
-    <mat-grid-tile  class="reveal" rowspan="7"  colspan="4">
+    <mat-grid-tile  class="reveal" rowspan="8"  colspan="4">
       <app-pricing></app-pricing>
     </mat-grid-tile>
 

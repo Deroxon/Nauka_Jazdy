@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-gmap',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GmapComponent implements OnInit {
 
-  constructor() { }
+  webWidth:any = window.innerWidth
+
+  constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
+    this.service.subActualWidth$().subscribe(data => this.webWidth = data )
   }
 
 }
