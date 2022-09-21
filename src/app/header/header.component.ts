@@ -28,24 +28,24 @@ export class HeaderComponent implements OnInit {
 
     // setting nav
     setTimeout(() => {
-
     let mainPrice = document.querySelector('.h1MainPrice')
     let contact = document.querySelector('.contactH1')
     let logo =  document.querySelector('.logo')
 
-
-
-    let rect = mainPrice!.getBoundingClientRect().top + window.scrollY;
-    let rect2 = contact!.getBoundingClientRect().top + window.scrollY;
-    let rect3 = logo!.getBoundingClientRect().top + window.scrollY;
-
-
+    let rect = mainPrice!.getBoundingClientRect().top + window.scrollY -220;
+    let rect2 = contact!.getBoundingClientRect().top + window.scrollY -220;
+    let rect3 = logo!.getBoundingClientRect().top + window.scrollY -220;
 
     this.priceNav= rect
     this.contactNav = rect2
     this.mainNav = rect3
 
-    },1000 )
+    },300 )
+    this.service.subTableofNav$().subscribe(data => {
+      this.priceNav = data[0]
+      this.contactNav = data[1]
+      this.mainNav = data[2]
+    })
   }
 
   scroll(value:any) {

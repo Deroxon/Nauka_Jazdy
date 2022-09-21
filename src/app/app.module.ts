@@ -20,6 +20,7 @@ import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GmapComponent } from './gmap/gmap.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -32,6 +33,7 @@ import { GmapComponent } from './gmap/gmap.component';
     PricingComponent,
     ContactComponent,
     GmapComponent,
+    FooterComponent,
 
   ],
   imports: [

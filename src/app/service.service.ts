@@ -12,6 +12,8 @@ export class ServiceService {
   actualWidth!: number;
   formObject: object = {};
   positionsNav: Array<any> = []
+  footerHeight!: number;
+  tableOfNav: Array<number> = []
 
 
   breakpointOffer$ = new Subject()
@@ -19,6 +21,8 @@ export class ServiceService {
   breakpointNav$ = new Subject()
   actualWidth$ = new Subject()
   formObject$ = new Subject()
+  footerHeight$ = new Subject()
+  tableOfNav$ = new Subject()
 
   constructor() { }
 
@@ -30,17 +34,30 @@ export class ServiceService {
   }
 
   onResize(event: any) {
+    let mainPrice = document.querySelector('.h1MainPrice')
+    let contact = document.querySelector('.contactH1')
+    let logo =  document.querySelector('.logo')
+
     this.actualWidth = event.target.innerWidth
     this.breakpointOffer = (this.actualWidth <= 1000) ? 1 : 4
     this.rowHeight =  (window.innerWidth <= 1000) ? 125 : 250
     this.breakpointNav = (this.actualWidth <= 400) ? 1: 4
+    this.footerHeight = (this.actualWidth <= 1000) ? 60: 150
+
+    this.tableOfNav[0] = mainPrice!.getBoundingClientRect().top + window.scrollY-220;
+    this.tableOfNav[1] = contact!.getBoundingClientRect().top + window.scrollY-500;
+    this.tableOfNav[2] = logo!.getBoundingClientRect().top + window.scrollY-220;
+
+    console.log(this.tableOfNav)
 
     console.log(window.innerWidth)
 
+    this.tableOfNav$.next(this.tableOfNav)
     this.breakpointOffer$.next(this.breakpointOffer)
     this.breakpointNav$.next(this.breakpointNav)
     this.rowHeight$.next(this.rowHeight)
     this.actualWidth$.next(this.actualWidth)
+    this.footerHeight$.next(this.footerHeight)
   }
 
 
@@ -71,6 +88,13 @@ export class ServiceService {
 
   subFormObject$(): Observable<any> {
     return this.formObject$.asObservable()
+  }
+  subFooterHeight$(): Observable<any> {
+    return this.footerHeight$.asObservable()
+  }
+
+  subTableofNav$(): Observable<any> {
+    return this.tableOfNav$.asObservable()
   }
 
 }

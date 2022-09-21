@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class PricingComponent implements OnInit {
 
-  ulList: Array<string> = ['Materiały Szkoleniowe', '30 godzin zajęć teoretycznych, w formie e-learningowej, w tym 4 godziny zajęć 2 z ratownikiem medycznym z pierwszej pomocy przedmedycznej.', '30 godzin zajęć praktycznych', 'Plac manewrowy WORD Milicz', ' Możliwość płatności ratalnej', ]
+  ulList: Array<string> = ['Materiały Szkoleniowe', '30 godzin zajęć teoretycznych, w formie e-learningowej, w tym 4 godziny zajęć z ratownikiem medycznym z pierwszej pomocy przedmedycznej.', '30 godzin zajęć praktycznych', 'Plac manewrowy DORD(WORD) Milicz', ' Możliwość płatności ratalnej', ]
 
   constructor() { }
 
