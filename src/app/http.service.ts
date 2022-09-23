@@ -12,9 +12,5 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  send(form: Form): Observable<Form> {
-    console.log('elo')
-    return this.http.post<Form>('', form)
-  }
 
 }

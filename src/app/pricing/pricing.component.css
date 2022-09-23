@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 h1{
   text-align: center;
 }
@@ -12,7 +12,8 @@ h1{
 }
 .containerPrice  {
   padding: 30px;
-  margin-top:100px
+  margin-top:100px;
+
 }
 h2 span {
   font-size:1.3em;
@@ -21,11 +22,13 @@ h2 span {
 :host /deep/ .mat-list-item-content {
   font-size: 1.2em;
   min-height:25px;
+  font-family: 'Open Sans', sans-serif;
 }
 .extraLessons {
   font-size: 1.5em;
   text-align: center;
   margin-top:20px;
+
 }
 
 
@@ -33,6 +36,7 @@ h2 {text-align: center;}
 ::ng-deep .mat-list .mat-list-item .mat-line{
   word-wrap: break-word;
  white-space: pre-wrap;
+ min-height:25px;
 
 }
 mat-list {

@@ -16,7 +16,7 @@
 
     <main>
 
-    <mat-grid-tile  class="reveal about" rowspan="3"  colspan="4">
+    <mat-grid-tile  class="reveal about" [rowspan]="(width < 600) ? '5': '4' "  colspan="4">
       <app-about></app-about>
     </mat-grid-tile>
 

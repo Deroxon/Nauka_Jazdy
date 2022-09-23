@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .offerSection h1 {
   text-align: center;
   color: #fdfdfd;
@@ -8,6 +8,8 @@
 .offerSection {
   width:100%;
   font-size:18px;
+  font-family: 'Open Sans', sans-serif;
+
 }
 .offerItem {
   text-align: center;

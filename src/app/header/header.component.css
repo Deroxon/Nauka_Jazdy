@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .nav {
   width:100%;
   margin-left: auto;
   margin-right:auto;
   transition: opacity 0.6s linear;
+
 }
 .main-nav {
   font-size:1.2em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color:white;
   cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
 }
 .main-nav:hover {
   color: rgb(149, 171, 235);

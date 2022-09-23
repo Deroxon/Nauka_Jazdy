@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .aboutUsDiv {
   align-items: center;
   justify-content: center;
@@ -5,17 +7,19 @@
   width:80%;
   margin-left: auto;
   margin-right: auto;
+  margin-top:30px;
+  line-height: 150%;
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-weight: 600;
 }
 
-@media screen and (max-width: 300px) {
-   p {
-    font-size:0.8em;
-   }
-}
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 860px) {
   p {
-   font-size:1.1em;
+   font-size:1.6em;
+   line-height: 150%;
   }
 }
 @media screen and (max-width: 850px) {
@@ -23,8 +27,13 @@
    font-size:1.3em;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 500px) {
   p {
-   font-size:1.6em;
+   font-size:1.1em;
+  }
+}
+@media screen and (max-width: 300px) {
+  p {
+   font-size:0.8em;
   }
 }
