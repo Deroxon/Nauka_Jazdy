@@ -6,3 +6,25 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 300px) {
+   p {
+    font-size:0.8em;
+   }
+}
+
+@media screen and (max-width: 500px) {
+  p {
+   font-size:1.1em;
+  }
+}
+@media screen and (max-width: 850px) {
+  p {
+   font-size:1.3em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  p {
+   font-size:1.6em;
+  }
+}
