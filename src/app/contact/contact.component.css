@@ -19,4 +19,11 @@ mat-form-field {
   margin-right: auto;
   margin-top: 10px;
 }
-
+.contactH1 {
+  text-align: center;
+}
+@media screen and (max-width: 400px) {
+  .contactH1 {
+    font-size:1.2em;
+  }
+}

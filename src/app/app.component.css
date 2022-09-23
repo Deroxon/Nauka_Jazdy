@@ -2,6 +2,7 @@
   width:100%;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .navMenu {
@@ -40,6 +41,7 @@
 
 mat-grid-tile {
   margin-top:25px;
+  width:100vw;
 }
 
 
@@ -48,7 +50,7 @@ mat-grid-tile {
   .logo {
       margin-top: 20px;
       background-size: 90%;
-      padding:5%;
+
   }
 }
 @media screen and (min-width: 700px) {
