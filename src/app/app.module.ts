@@ -21,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GmapComponent } from './gmap/gmap.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServiceService } from './service.service';
 
 
 
@@ -58,7 +59,7 @@ import { FooterComponent } from './footer/footer.component';
 
 
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

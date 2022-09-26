@@ -1,7 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import {Form} from "../app.component"
-import { HttpService } from '../http.service';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { ServiceService } from '../service.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
@@ -29,7 +28,7 @@ export class ContactComponent implements OnInit {
 
 
 
-  constructor(private http: HttpService, private service:ServiceService,private _snackBar: MatSnackBar) { }
+  constructor(private service:ServiceService,private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
 

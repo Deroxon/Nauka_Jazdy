@@ -48,10 +48,6 @@ export class ServiceService {
     this.tableOfNav[1] = contact!.getBoundingClientRect().top + window.scrollY-500;
     this.tableOfNav[2] = logo!.getBoundingClientRect().top + window.scrollY-220;
 
-    console.log(this.tableOfNav)
-
-    console.log(window.innerWidth)
-
     this.tableOfNav$.next(this.tableOfNav)
     this.breakpointOffer$.next(this.breakpointOffer)
     this.breakpointNav$.next(this.breakpointNav)

@@ -49,7 +49,6 @@ export class HeaderComponent implements OnInit {
   }
 
   scroll(value:any) {
-    console.log(value)
     window.scroll( 0, value );
   }
 
