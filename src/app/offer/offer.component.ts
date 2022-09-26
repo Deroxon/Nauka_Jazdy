@@ -21,7 +21,7 @@ export class OfferComponent  {
     icon: "calendar_month"
    },
    {
-    text:"Promocyjne ceny kursu oraz jazd dodatkowych (tak bym zmieniła)",
+    text:"Promocyjne ceny kursu oraz jazd dodatkowych",
     icon: "attach_money"
    },
    {
