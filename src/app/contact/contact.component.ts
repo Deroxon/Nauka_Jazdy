@@ -118,7 +118,7 @@ export class ContactComponent implements OnInit {
 
     else {
       // checking if email is correct
-      if(this.name.length >5 && this.surName.length > 5 && !this.email.hasError('email')) {
+      if(this.name.length >2 && this.surName.length >2 && !this.email.hasError('email')) {
 
        getLocalStorage +=1
       e.preventDefault();
