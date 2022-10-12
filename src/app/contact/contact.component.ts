@@ -105,7 +105,6 @@ export class ContactComponent implements OnInit {
   //emailjs with Local Storage
    public async sendEmail(e: Event) {
     let getLocalStorage = Number(localStorage.getItem('Emails_Send'))
-    getLocalStorage +=1
     localStorage.setItem('Emails_Send', String(getLocalStorage))
 
     let config = new MatSnackBarConfig()
@@ -118,14 +117,25 @@ export class ContactComponent implements OnInit {
     }
 
     else {
+      // checking if email is correct
+      if(this.name.length >5 && this.surName.length > 5 && !this.email.hasError('email')) {
+
+       getLocalStorage +=1
       e.preventDefault();
-      emailjs.sendForm('service_reu91lf', 'template_3ljgqb2', e.target as HTMLFormElement, '42GOWnH9C6RwDAaqE')
-      .then((result: EmailJSResponseStatus) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-      this._snackBar.open('Mail został wysłany, dziękujemy za kontakt!', '', config)
+        emailjs.sendForm('service_reu91lf', 'template_3ljgqb2', e.target as HTMLFormElement, '42GOWnH9C6RwDAaqE')
+        .then((result: EmailJSResponseStatus) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        }); 
+        this._snackBar.open('Mail został wysłany, dziękujemy za kontakt!', '', config) 
+
+        this.clearForm()
+      }
+      else {
+        this._snackBar.open('Uzupełnij poprawnie pola!', '', config)
+      }
+     
     }
 
 
@@ -136,6 +146,13 @@ export class ContactComponent implements OnInit {
         localStorage.setItem('date', date.toLocaleDateString())
         localStorage.setItem('blockDate', date.toLocaleTimeString().split(':').join(''))
       }
+  }
+  clearForm() {
+    this.name= ''
+    this.surName = ''
+    this.emailed = ''
+    this.textArea = ''
+    this.phone = 0;
   }
 
 }
