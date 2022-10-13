@@ -19,9 +19,9 @@ export class AppComponent {
     window.addEventListener("scroll", this.reveal)
     this.service.subActualWidth$().subscribe(data => this.width = data)
        // https
-     if (location.protocol !== "https:") {
-        location.protocol = "https:";
-        }
+       // if (location.protocol !== "https:") {
+       // location.protocol = "https:";
+       // }
   }
 
   reveal(){

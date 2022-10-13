@@ -8,7 +8,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 .footerPart {
-  font-size: 1.4em;
+  font-size: 1.3em;
   text-align: center;
   line-height: 110%;
 }
@@ -34,7 +34,7 @@ mat-icon {
 }
 @media screen and (min-width: 1200px) {
   .footerPart {
-    font-size:1.7em;
+    font-size:1.4em;
   }
 
 }
@@ -44,7 +44,7 @@ mat-icon {
 
   }
   .downFooterPart {
-    font-size:1em;
+    font-size:0.9em;
     padding:5px;
   }
 

@@ -21,11 +21,15 @@ h1 {
    font-size:1.6em;
    line-height: 150%;
   }
+  .aboutUsDiv  {
+    width:65%;
+  }
 }
 @media screen and (max-width: 850px) {
   p {
    font-size:1.3em;
   }
+
 }
 @media screen and (max-width: 500px) {
   p {

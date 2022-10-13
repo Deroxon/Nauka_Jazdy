@@ -19,9 +19,10 @@
   display: block;
   margin-top:40px;
   color: #ffffff;
+  font-size:0.9em;
 }
 .offerIcon {
-  transform: scale(4);
+  transform: scale(3);
   color: #fcfcfc;
 }
 
@@ -32,7 +33,7 @@
   }
 
   .offerIcon {
-    transform: scale(3);
+    transform: scale(2.5);
   }
   .text {
     font-size:0.8em;
