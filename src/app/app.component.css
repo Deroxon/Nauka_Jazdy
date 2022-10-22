@@ -1,94 +1,51 @@
 .main {
-  width:100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.navMenu {
-  position: fixed;
-  z-index: 1000;
-  background-color: rgba(18, 18, 19, 0.5);
-  opacity: 1;
-  transition: all 0.3s linear;
-  margin-top: 0;
-
-}
-
-.navMenu.hide {
-  opacity: 0;
-}
-
-.dropdownButton {
-  position: fixed;
-  top:-10px;
-  left:-5px;
-  cursor: pointer;
-  z-index: 1005;
-}
-
-.exitButton{
-  position: fixed;
-  top:0px;
-  right:0px;
-  cursor: pointer;
-  z-index: 1005;
-  color:white;
-  background-color: rgba(93, 93, 99, 0.4);
-  border: none;
-  border-radius: 10px;
-}
-
-mat-grid-tile {
-  margin-top:25px;
-}
-
-
-@media screen and (max-width: 700px) {
-
-  .logo {
-      margin-top: 20px;
-      background-size: 90%;
-      padding:5%;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-@media screen and (min-width: 700px) {
+  .navMenu {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(18, 18, 19, 0.5);
+    opacity: 1;
+    transition: all 0.3s linear;
+    margin-top: 0;
+  
+  }
+  
+  .navMenu.hide {
+    opacity: 0;
+  }
+  
+  .dropdownButton {
+    position: fixed;
+    top:-10px;
+    left:-5px;
+    cursor: pointer;
+    z-index: 1005;
+  }
+  
+  .exitButton{
+    position: fixed;
+    top:0px;
+    right:0px;
+    cursor: pointer;
+    z-index: 1005;
+    color:white;
+    background-color: rgba(93, 93, 99, 0.4);
+    border: none;
+    border-radius: 10px;
+  }
   mat-grid-tile {
-    margin-top: 200px;
+    margin-top:25px;
   }
-  .logo {
-      margin-top: 20px;
-      background-size: 80%;
+  
+  .reveal{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 2s all ease;
   }
-}
-@media screen and (min-width: 1800px) {
-
-  .logo {
-      background-size: 50%
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
   }
-}
-
-
-
-.logo {
-  background-image: url('../assets/logo/logo.jpeg');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height:100%;
-}
-.about {
-  margin-top: 0px;
-}
-
-.reveal{
-  transform: translateY(100px);
-  opacity: 0;
-  transition: 2s all ease;
-}
-.reveal.active{
-  transform: translateY(0);
-  opacity: 1;
-}
-.footerTile {
-  margin-top:300px;
-}

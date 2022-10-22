@@ -21,6 +21,10 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GmapComponent } from './gmap/gmap.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ErrorComponent } from './error/error.component';
+import { UpdatesComponent } from './updates/updates.component';
 
 
 
@@ -34,6 +38,9 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     GmapComponent,
     FooterComponent,
+    HomeComponent,
+    ErrorComponent,
+    UpdatesComponent,
 
   ],
   imports: [
@@ -46,6 +53,7 @@ import { FooterComponent } from './footer/footer.component';
   MatInputModule,
   HttpClientModule,
   MatSnackBarModule,
+  AppRoutingModule,
 
 
   //Angular Material

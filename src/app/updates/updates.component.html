@@ -1,0 +1,24 @@
+
+
+<div class="updates">
+
+    
+
+    <mat-list>
+        <h1>Aktualności</h1>
+        <mat-list-item *ngFor="let update of updates">
+        <img 
+        src={{update.mainImage.url}} 
+        title={{update.mainImage.title}} 
+        alt={{update.mainImage.alt}} />
+
+          <h2 mat-line>{{update.title}}</h2>
+          <div mat-line> {{update.description}} </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+
+      </mat-list>
+
+</div>

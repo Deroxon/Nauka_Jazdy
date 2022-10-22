@@ -6,10 +6,37 @@
 [rowHeight]="(width >800) ? '70px' :  '22px'"  >
 
 
-    <mat-grid-tile (click)="scroll(mainNav)"  class='main-nav'>Start</mat-grid-tile>
-    <mat-grid-tile (click)="scroll(priceNav)" class='main-nav'>Cennik</mat-grid-tile>
-    <mat-grid-tile class='main-nav'>Galeria</mat-grid-tile>
-    <mat-grid-tile (click)="scroll(contactNav)" class='main-nav'>Kontakt</mat-grid-tile>
+    <mat-grid-tile 
+    (click)="scroll(mainNav)"  
+    class='main-nav'
+    routerLink="Strona Główna"
+    fragment="Start"
+    >Start</mat-grid-tile>
+
+    <mat-grid-tile 
+    (click)="scroll(priceNav)" 
+    class='main-nav'
+    routerLink="Strona Główna"
+    fragment="Cennik"
+    >Cennik</mat-grid-tile>
+
+    <mat-grid-tile 
+    (click)="scroll(mainNav)"  
+    class='main-nav'
+    routerLink="Aktualności"
+    >Aktualności</mat-grid-tile>
+
+    <mat-grid-tile 
+    class='main-nav' 
+    routerLink="/Galeria"
+    >Galeria</mat-grid-tile>
+
+    <mat-grid-tile 
+    (click)="scroll(contactNav)" 
+    class='main-nav'
+    routerLink="Strona Główna"
+    fragment="Kontakt"
+    >Kontakt</mat-grid-tile>
 </mat-grid-list>
 
 </nav>

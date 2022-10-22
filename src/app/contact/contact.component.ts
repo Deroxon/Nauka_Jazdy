@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import {Form} from "../app.component"
+import {Form} from "../home/home.component"
 import { HttpService } from '../http.service';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { ServiceService } from '../service.service';
