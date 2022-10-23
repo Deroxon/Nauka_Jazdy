@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GmapComponent } from './gmap/gmap.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceService } from './service.service';
+import { DescriptionComponent } from './description/description.component';
 
 
 
@@ -35,6 +36,7 @@ import { ServiceService } from './service.service';
     ContactComponent,
     GmapComponent,
     FooterComponent,
+    DescriptionComponent,
 
   ],
   imports: [

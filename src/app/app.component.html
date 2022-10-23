@@ -36,6 +36,10 @@
       <app-contact></app-contact>
     </mat-grid-tile>
 
+    <mat-grid-tile class="reveal" [rowspan]="(width < 240) ? '26': (width < 260) ? '24': (width < 300) ? '21': (width < 400) ? '19': (width < 500) ? '17': (width < 600) ? '15': 13" colspan="4">
+      <app-description></app-description>
+    </mat-grid-tile>
+
     <mat-grid-tile class="reveal footerTile" style="backgroundColor: rgb(56, 93, 207); " [rowspan]="(width < 1000) ? '5': '4' "  colspan="4" >
       <app-footer></app-footer>
     </mat-grid-tile>
