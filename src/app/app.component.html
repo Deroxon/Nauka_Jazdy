@@ -1,11 +1,11 @@
 
-<mat-grid-list cols="4"
+<mat-grid-list cols="5"
 [rowHeight]="(width > 400 && width < 1000) ? '100px': (width > 1000) ? '90px': '110px' " class="main">
 
     <button (click)="toggleMenu()" *ngIf="navigationMenu"  class="exitButton" >X</button>
     <button (click)="toggleMenu()" *ngIf="!navigationMenu" class="dropdownButton" mat-fab color="primary"><mat-icon>density_medium</mat-icon></button>
 
-    <mat-grid-tile   class="navMenu navMenuAnimate" colspan="4" >
+    <mat-grid-tile   class="navMenu navMenuAnimate" colspan="5" >
       <app-header style="width:100%"></app-header>
     </mat-grid-tile>
 

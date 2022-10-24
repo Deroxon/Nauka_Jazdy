@@ -20,9 +20,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.service.subBreakpointNav$().subscribe(data => this.breakpoint =data)
     this.service.subActualWidth$().subscribe(data => this.width = data)
-    this.breakpoint = (window.innerWidth <= 400) ? 1: 4
+    this.breakpoint = (window.innerWidth <= 500) ? 1: 5
 
-    if(this.width < 400) {
+    if(this.width < 500) {
       this.menu = false
     }
 

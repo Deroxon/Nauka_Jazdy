@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorComponent } from './error/error.component';
 import { UpdatesComponent } from './updates/updates.component';
+import { UpdateComponent } from './updates/update/update.component';
 
 
 
@@ -41,6 +42,7 @@ import { UpdatesComponent } from './updates/updates.component';
     HomeComponent,
     ErrorComponent,
     UpdatesComponent,
+    UpdateComponent,
 
   ],
   imports: [

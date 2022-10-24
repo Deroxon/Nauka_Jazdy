@@ -1,0 +1,23 @@
+img {
+    width:20%;
+    min-width:300px;
+    max-width:600px;
+}
+
+.update-item {
+    display: flex;
+    border: 1px solid rgba(170, 167, 167, 0.7);
+    cursor: pointer;
+}
+h2 {
+    align-items: flex-start;
+    margin-bottom: 0px;
+}
+.describe {
+    margin-top: 50px;
+}
+.describe p {
+    color:rgb(193, 195, 196);
+    font-size:0.8em;
+    margin-top: 0px;
+}

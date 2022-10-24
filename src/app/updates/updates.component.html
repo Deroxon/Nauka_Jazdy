@@ -3,22 +3,34 @@
 <div class="updates">
 
     
+  <h1>Aktualności</h1>
+    
+          <div class="update-item" *ngFor="let update of updates">
+              <img 
+                src="{{update.mainImage.url}}"
+                title="{{update.mainImage.title}}"
+                alt="{{update.mainImage.alt}}"
+              />
+      
+              <div class="describe">
+                
+                <h2 
+                mat-line>{{update.title}} 
+                </h2>
+                <p>{{update.date}} </p>
+                <div mat-line>
+                  {{update.shortDescription}}
+                </div>
+                <button><a routerLink="/Aktualności/Artykuł/{{update.id}}"> Zobacz Więcej</a> </button>
+            </div>
+           
 
-    <mat-list>
-        <h1>Aktualności</h1>
-        <mat-list-item *ngFor="let update of updates">
-        <img 
-        src={{update.mainImage.url}} 
-        title={{update.mainImage.title}} 
-        alt={{update.mainImage.alt}} />
-
-          <h2 mat-line>{{update.title}}</h2>
-          <div mat-line> {{update.description}} </div>
-        </mat-list-item>
+          </div>
+    
 
         <mat-divider></mat-divider>
 
 
-      </mat-list>
+
 
 </div>

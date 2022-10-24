@@ -7,23 +7,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatesComponent implements OnInit {
   
-  updates = [
-    { title: 'Zaczynamy szkolić na kurs prawa Jazdy!', 
-      date: new Date(09,09,2022), 
-      description: 'Dnia takiego i takiego otworzyliśmy naszą szkołę nauki jazdy w Prusicach! Szkolimy kierowców na egzamin kategorii B1.', 
-
-      comments: [ {userName: 'Mirosław żelek', date: new Date(10, 09, 2022), rating: 5, comment: 'Super szkoła jazdy!'} ], 
-      tags: ['Nauka Jazdy', 'Prawo jazdy', 'Prawo jazdy kategorii B', 'Nauka Jazdy Prusice'], 
+  updates: any = [
+    {
+      title: 'Otwieramy biuro nauki jazdy w Prusicach!',
+      shortDescription: 'This is short description of title',
+      description: '',
+      tags: ['Description', 'short story', 'etc'],
+      date: '24/10/2022 | 14:35',
       images: [
-        { url: "", alt: 'Tekst Alternatywny', title: 'Tytuł Obrazka'} ], 
-      mainImage:[ 
-        { url: "../assets/logo/logo.jpeg", alt: 'Tekst Alternatywny', title: 'Tytuł Obrazka'}   ],  }
+        { url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        }
+      ],
+      mainImage: {
+          url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        },
+        id:1,
+    },
+    {
+      title: 'Tytuł',
+      shortDescription: ' This is short description of title',
+      tags: ['Description', 'short story', 'etc'],
+      images: [
+        { url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        }
+      ],
+      mainImage: {
+          url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        },
+        id:2,
+    },
   ]
   
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.updates[0].mainImage.url)
   }
 
 }

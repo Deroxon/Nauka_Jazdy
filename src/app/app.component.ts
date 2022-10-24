@@ -10,6 +10,7 @@ import { ServiceService } from './service.service';
 export class AppComponent {
   width!: number;
   navigationMenu: boolean = true
+ 
   
   constructor(private service: ServiceService){}
   

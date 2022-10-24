@@ -41,7 +41,7 @@ export class ServiceService {
     this.actualWidth = event.target.innerWidth
     this.breakpointOffer = (this.actualWidth <= 1000) ? 1 : 4
     this.rowHeight =  (window.innerWidth <= 1000) ? 125 : 250
-    this.breakpointNav = (this.actualWidth <= 400) ? 1: 4
+    this.breakpointNav = (this.actualWidth <= 500) ? 1: 5
     this.footerHeight = (this.actualWidth <= 1000) ? 60: 150
 
     this.tableOfNav[0] = mainPrice!.getBoundingClientRect().top + window.scrollY-220;
