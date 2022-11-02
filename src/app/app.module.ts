@@ -15,6 +15,8 @@ import  {MatInputModule } from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
+import {AngularFireModule} from '@angular/fire/compat'
+
 import { OfferComponent } from './offer/offer.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ContactComponent } from './contact/contact.component';
@@ -26,6 +28,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { ErrorComponent } from './error/error.component';
 import { UpdatesComponent } from './updates/updates.component';
 import { UpdateComponent } from './updates/update/update.component';
+import { environment } from 'src/environments/environment';
+import { LoginComponent } from './Auth/login/login.component';
+import { RegisterComponent } from './Auth/register/register.component';
+import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
 
 
 
@@ -43,6 +49,9 @@ import { UpdateComponent } from './updates/update/update.component';
     ErrorComponent,
     UpdatesComponent,
     UpdateComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgotPasswordComponent,
 
   ],
   imports: [
@@ -56,6 +65,7 @@ import { UpdateComponent } from './updates/update/update.component';
   HttpClientModule,
   MatSnackBarModule,
   AppRoutingModule,
+  AngularFireModule.initializeApp(environment.firebase),
 
 
   //Angular Material
