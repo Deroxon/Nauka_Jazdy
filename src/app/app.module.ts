@@ -26,6 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ErrorComponent } from './error/error.component';
 import { UpdatesComponent } from './updates/updates.component';
 import { UpdateComponent } from './updates/update/update.component';
+import { LongTextPipe } from './shared/long-text.pipe';
+import { CreateUpdateComponent } from './updates/create-update/create-update.component';
 
 
 
@@ -43,6 +45,8 @@ import { UpdateComponent } from './updates/update/update.component';
     ErrorComponent,
     UpdatesComponent,
     UpdateComponent,
+    LongTextPipe,
+    CreateUpdateComponent,
 
   ],
   imports: [

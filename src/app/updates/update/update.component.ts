@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-update',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateComponent implements OnInit {
 
-  constructor() { }
+  RouteParam$: any;
+  update: any;
+  updateId: any;
+
+
+  constructor(private activatedRoute: ActivatedRoute, private service: ServiceService) { }
+
+
 
   ngOnInit(): void {
+    this.RouteParam$ = this.activatedRoute.paramMap.subscribe((param) => {
+      this.updateId = param.get('id')
+      this.update = this.service.updates.find( (x:any) => x.id == this.updateId);
+    })
+
+
   }
 
 }

@@ -1,13 +1,25 @@
 img {
     width:20%;
-    min-width:300px;
-    max-width:600px;
+    min-width:250px;
+    max-width:550px;
+}
+.updates {
+  margin-top:30px;
+}
+
+h1 {
+  text-align: center;
+
 }
 
 .update-item {
     display: flex;
     border: 1px solid rgba(170, 167, 167, 0.7);
     cursor: pointer;
+}
+.update-item:hover {
+  transition: 0.1s all ease-in-out;
+  border: 1px solid gray;
 }
 h2 {
     align-items: flex-start;
@@ -17,7 +29,30 @@ h2 {
     margin-top: 50px;
 }
 .describe p {
-    color:rgb(193, 195, 196);
+    color:rgb(170, 174, 175);
     font-size:0.8em;
     margin-top: 0px;
+}
+
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.1em;
+    line-height: 100%;
+  }
+  .describe p {
+    font-size: 0.8em;
+  }
+  .text {
+    font-size: 0.8em;
+  }
+  .update-item {
+   border: none;
+  }
+  .update-item{
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+  }
+
 }

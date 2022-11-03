@@ -3,36 +3,36 @@
 
 <mat-grid-list class="nav"
 [cols]="breakpoint"
-[rowHeight]="(width >800) ? '70px' :  '22px'"  >
+[rowHeight]="(width >800) ? '90px' :  '20px'"  >
 
 
-    <mat-grid-tile 
-    (click)="scroll(mainNav)"  
+    <mat-grid-tile
+    (click)="scroll(mainNav)"
     class='main-nav'
-    routerLink="Strona Główna"
+    routerLink=""
     fragment="Start"
     >Start</mat-grid-tile>
 
-    <mat-grid-tile 
-    (click)="scroll(priceNav)" 
+    <mat-grid-tile
+    (click)="scroll(priceNav)"
     class='main-nav'
     routerLink="Strona Główna"
     fragment="Cennik"
     >Cennik</mat-grid-tile>
 
-    <mat-grid-tile 
-    (click)="scroll(mainNav)"  
+    <mat-grid-tile
+    (click)="scroll(mainNav)"
     class='main-nav'
     routerLink="Aktualności"
     >Aktualności</mat-grid-tile>
 
-    <mat-grid-tile 
-    class='main-nav' 
+    <mat-grid-tile
+    class='main-nav'
     routerLink="/Galeria"
     >Galeria</mat-grid-tile>
 
-    <mat-grid-tile 
-    (click)="scroll(contactNav)" 
+    <mat-grid-tile
+    (click)="scroll(contactNav)"
     class='main-nav'
     routerLink="Strona Główna"
     fragment="Kontakt"

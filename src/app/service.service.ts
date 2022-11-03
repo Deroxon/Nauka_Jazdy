@@ -1,10 +1,51 @@
 import { HostListener, Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { LongTextPipe } from './shared/long-text.pipe';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
+
+  updates: any = [
+    {
+      title: 'Otwieramy biuro nauki jazdy w Prusicach!',
+      shortDescription: 'W październiku otworzyliśmy nasze nowe biuro nauki Jazdy w Prusicach, mieści się ono przy Prusickim Rynku, ul. Ludowa 4',
+      description: '',
+      tags: ['Description', 'short story', 'etc'],
+      date: '24/10/2022 | 14:35',
+      images: [
+        { url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        }
+      ],
+      mainImage: {
+          url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        },
+        id:1,
+    },
+    {
+      title: 'Tytuł',
+      shortDescription: ' This is short description of title',
+      tags: ['Description', 'short story', 'etc'],
+      images: [
+        { url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        }
+      ],
+      mainImage: {
+          url: '../../assets/logo/logo.jpeg',
+          title: 'Tytuł obrazka',
+          alt: "Tekst alternatywny SEO",
+        },
+        id:2,
+    },
+  ]
 
   breakpointOffer!: number;
   breakpointNav!: number;
@@ -48,9 +89,10 @@ export class ServiceService {
     this.tableOfNav[1] = contact!.getBoundingClientRect().top + window.scrollY-500;
     this.tableOfNav[2] = logo!.getBoundingClientRect().top + window.scrollY-220;
 
-    console.log(this.tableOfNav)
+    // console.log(this.tableOfNav)
 
-    console.log(window.innerWidth)
+    // console.log(window.innerWidth)
+
 
     this.tableOfNav$.next(this.tableOfNav)
     this.breakpointOffer$.next(this.breakpointOffer)
@@ -58,6 +100,9 @@ export class ServiceService {
     this.rowHeight$.next(this.rowHeight)
     this.actualWidth$.next(this.actualWidth)
     this.footerHeight$.next(this.footerHeight)
+
+
+
   }
 
 

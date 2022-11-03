@@ -10,13 +10,13 @@
     opacity: 1;
     transition: all 0.3s linear;
     margin-top: 0;
-  
+
   }
-  
+
   .navMenu.hide {
     opacity: 0;
   }
-  
+
   .dropdownButton {
     position: fixed;
     top:-10px;
@@ -24,7 +24,7 @@
     cursor: pointer;
     z-index: 1005;
   }
-  
+
   .exitButton{
     position: fixed;
     top:0px;
@@ -39,7 +39,7 @@
   mat-grid-tile {
     margin-top:25px;
   }
-  
+
   .reveal{
     transform: translateY(100px);
     opacity: 0;
@@ -49,3 +49,7 @@
     transform: translateY(0);
     opacity: 1;
   }
+
+
+
+
