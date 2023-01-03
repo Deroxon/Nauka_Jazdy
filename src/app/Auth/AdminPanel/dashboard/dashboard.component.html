@@ -1,0 +1,75 @@
+<button (click)="logout()">Wyloguj się</button>
+<div class="container">
+
+ <form class="example-form">
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tytuł H1</mat-label>
+    <input type="text" name="title" matInput placeholder="Ex. Otwieramy biuro nauki jazdy!"[(ngModel)]='title' >
+  </mat-form-field>
+
+ <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tytuł H1</mat-label>
+    <input type="date" name="date" matInput placeholder="Ex. Otwieramy biuro nauki jazdy!"[(ngModel)]='date' >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tytuł Obrazka</mat-label>
+    <input type="text" name="mainImage.title" matInput placeholder="Ex. Toyota Yaris"[(ngModel)]='mainImage.title' >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tekst Alternatywny</mat-label>
+    <input type="text" name="mainImage.alt" matInput placeholder="Opis, co znajduję się na obrazku" [(ngModel)]='mainImage.alt' >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nazwa pliku Obrazka</mat-label>
+    <input type="text" name="mainImage.url" matInput placeholder="Ex. toyota.png"[(ngModel)]='mainImage.url' >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Krótki opis</mat-label>
+    <input type="text" name="shortDescription" matInput placeholder="2 zdania"[(ngModel)]='shortDescription' >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Opis aktualizacji</mat-label>
+    <textarea  name="description" matInput placeholder="2 zdania"[(ngModel)]='description' > </textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label> {{displayedTags}} </mat-label>
+    <input type="text" name="tag" matInput placeholder="Tagi"[(ngModel)]='tag' >
+  </mat-form-field>
+
+  <button mat-flat-button color="warn" (click)="addTag()">Dodaj Tag</button>
+
+
+
+  <p>Liczba obrazków: {{images.length}} </p>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tytuł obrazku dodatkowego</mat-label>
+    <input type="text" name="image.title" matInput placeholder="ex Toyota Yaris"[(ngModel)]='image.title' >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Teksty alternatwne obrazków</mat-label>
+    <input type="text" name="image.alt" matInput placeholder="" [(ngModel)]='image.alt' >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Url Obrazka </mat-label>
+    <input type="text" name="image.url" matInput placeholder="Ex. toyota_yaris.png"[(ngModel)]='image.url' >
+  </mat-form-field>
+
+  <button mat-flat-button color="warn" (click)="addImage()" > Dodaj Obrazek</button>
+
+
+</form>
+
+
+</div>
+
+

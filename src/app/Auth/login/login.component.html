@@ -1,1 +1,20 @@
-<p>login works!</p>
+
+
+<div class="login">
+  <div class="loginItems">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Ex. example@gmail.com"  [(ngModel)]="email">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput name="password" [(ngModel)]="password" />
+      </mat-form-field>
+    <button mat-flat-button color="primary" (click)="login()">Zaloguj się</button>
+
+    <p><a routerLink="/Login/ForgotPassword"> Zapomniałeś hasła?</a> </p>
+</div>
+</div>
+
+

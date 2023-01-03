@@ -32,6 +32,7 @@ import { environment } from 'src/environments/environment';
 import { LoginComponent } from './Auth/login/login.component';
 import { RegisterComponent } from './Auth/register/register.component';
 import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
+import { DashboardComponent } from './Auth/AdminPanel/dashboard/dashboard.component';
 
 
 
@@ -49,6 +50,9 @@ import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.
     ErrorComponent,
     UpdatesComponent,
     UpdateComponent,
+    DashboardComponent,
+    LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [

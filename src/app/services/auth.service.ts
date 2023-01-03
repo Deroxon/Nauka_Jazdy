@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth} from '@angular/fire/compat/auth'
+import { getAuth } from "firebase/auth";
+import { Observable, Subject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  
+
+  private loggedIn = true
+  private loggedIn$ = new Subject()
+
   constructor(private fireAuth: AngularFireAuth, private router: Router) { }
 
   login(email:string, password: string) {
@@ -15,8 +21,11 @@ export class AuthService {
       localStorage.setItem('token', 'true')
       console.log(res)
       if(res.user?.emailVerified == true) {
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/AdminPanel/Dashboard'])
+        this.loggedIn = true
+        this.loggedIn$.next(this.loggedIn)
       } else {
+
         this.router.navigate(['/verify'])
       }
 
@@ -35,7 +44,7 @@ export class AuthService {
       this.sendEmailForVerification(res.user)
     }, err => {
       alert(err.message)
-      this.router.navigate(['/register'])
+      this.router.navigate(['/Register'])
     })
   }
 
@@ -44,11 +53,14 @@ export class AuthService {
   logout() {
     this.fireAuth.signOut().then( (res: any) => {
       localStorage.removeItem('token');
-      this.router.navigate(['/login'])
+      this.loggedIn = true
+      this.loggedIn$.next(this.loggedIn)
+      this.router.navigate(['/Login'])
+
 
     }, (err: any) => {
       alert(err.message)
-      this.router.navigate(['/login'])
+      this.router.navigate(['/Login'])
     })
   }
 
@@ -68,9 +80,42 @@ export class AuthService {
   sendEmailForVerification(user : any) {
     console.log(user);
     user.sendEmailVerification().then((res : any) => {
-      this.router.navigate(['/verify']);
+      this.router.navigate(['/Login']);
     }, (err : any) => {
       alert('Something went wrong. Not able to send mail to your email.')
     })
   }
+
+  // get current user
+
+  getCurrentUser() {
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+   return user?.email
+  }
+
+
+  // checking if user is logged in
+ async checkIfUserIsLoggedIn() {
+   await this.fireAuth.onAuthStateChanged( (user) => {
+      if(user) {
+        this.router.navigate(['/AdminPanel/Dashboard'])
+        return user?.email
+      }
+      else {
+        this.router.navigate(['/Login'])
+        return ''
+      }
+    })
+  }
+
+
+
+  subLoggedIn$(){
+    return this.loggedIn$.asObservable()
+  }
+
 }
+
+

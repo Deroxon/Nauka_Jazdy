@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +9,7 @@ import { ServiceService } from '../service.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private service: ServiceService) { }
+  constructor(private service: ServiceService, private auth: AuthService) { }
   breakpoint: number = 1;
   heightFoot: number = 60;
 
@@ -21,5 +22,7 @@ export class FooterComponent implements OnInit {
     }
 
   }
+
+
 
 }
