@@ -25,7 +25,7 @@ h2 .oldPrice {
   color:rgb(190, 182, 182);
 }
 
-:host /deep/ .mat-list-item-content {
+:host .mat-list-item-content {
   font-size: 1.2em;
   min-height:25px;
   font-family: 'Open Sans', sans-serif;
@@ -50,14 +50,14 @@ mat-list {
 }
 
 @media screen and (max-width:700px) {
-  :host /deep/ .mat-list-item-content {
+  :host .mat-list-item-content {
     font-size: 0.9em;
     margin-top: 10px;
   }
 
 }
 @media screen and (max-width: 420px) {
-  :host /deep/ .mat-list-item-content {
+  :host  .mat-list-item-content {
     font-size: 0.7em;
 
   }
